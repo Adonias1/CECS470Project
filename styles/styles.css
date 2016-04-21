@@ -1,0 +1,64 @@
+p, h1, h2, h3, h4, h5, h6 {
+	font-family: sans-serif;
+}
+html, body {
+	height: 100%;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: auto;
+}
+body {
+	padding: 1em;
+	background-color: black;
+}
+.main-content {
+	/*TODO background image for all pages (Besides homepage)*/
+	background-color: #BEBEC0;
+	height: 100%;
+	width: 100%;
+}
+.homepage {
+	background-image:url("../media/headshot1.jpg");
+	background-repeat: no-repeat;
+}
+.rachel-title {
+	padding: 2em 2em 0em 2em;
+	text-align: center;
+}
+.rachel-title a {
+	font-size: 6em;
+	font-family:Edwardian Script ITC, script;
+	text-decoration: none;
+	color: black;
+}
+/*NAVIGATION*/
+nav {
+	margin: 1em 0em 1em 5%;
+	padding: 1.1em;
+	float: left;
+	background: rgb(255,255,255);
+	background: rgba(255,255,255, 0.5);
+	border-radius: 50px;
+}
+nav a {
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	font-size: 1.5em;
+}
+nav li {
+	padding: 1em 1em 1em 2em;
+	list-style: none;
+	font-family: serif;
+	font-size: 1.1em;
+}
+footer {
+	clear:left;
+	margin: 2em 0em 0em 0em;
+	padding: 2em;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
