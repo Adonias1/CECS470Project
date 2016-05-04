@@ -84,9 +84,13 @@ footer {
 	font-size: 14px;
 }
 .reel {
-	width: 30%;
+	display: block;
+	margin: 0 auto;
 	min-width: 250px;
-	float: right;
-	display: inline;
-	margin: 5px;
+	width: 50%;
+	margin-top: 10px;
+}
+.reel-title {
+	text-align: center;
+	margin: 2em 0em 0em 0em;
 }
