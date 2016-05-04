@@ -11,11 +11,20 @@ html {
 html, body {
 	/*height: 100%;*/
 	margin: 0 auto;
+<<<<<<< HEAD
 	/*overflow: auto;*/
 }
 body {
 	/*background-color: black;*/
 	/*background-color: #BEBEC0;*/
+=======
+	overflow: auto;
+}
+body {
+	background-color: black;
+	background-color: #BEBEC0;
+	/*background-image:url("../images/headshot1.jpg");*/
+>>>>>>> origin/Brick
 	background-repeat: no-repeat;
 }
 .main-content {
