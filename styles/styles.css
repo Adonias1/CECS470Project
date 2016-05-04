@@ -6,21 +6,23 @@ html, body {
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 1em;
 	overflow: auto;
 }
 body {
-	padding: 1em;
 	background-color: black;
+	background-color: #BEBEC0;
+	/*background-image:url("../images/headshot1.jpg");*/
+	background-repeat: no-repeat;
 }
 .main-content {
 	/*TODO background image for all pages (Besides homepage)*/
-	background-color: #BEBEC0;
+	/*background-color: #BEBEC0;
 	height: 100%;
 	width: 100%;
+	padding: 1em;*/
 }
 .homepage {
-	background-image:url("../images/headshot1.jpg");
+	/*background-image:url("../images/headshot1.jpg");*/
 	background-repeat: no-repeat;
 }
 .rachel-title {
@@ -33,6 +35,9 @@ body {
 	text-decoration: none;
 	color: black;
 }
+#logo {
+	margin-bottom: 4%;
+}
 .resume-title {
 	font-size: 1.4em;
 }
@@ -42,8 +47,8 @@ body {
 }
 /*NAVIGATION*/
 nav {
-	margin: 1em 0em 1em 3%;
-	padding: 1.1em;
+	margin: 1em 2% 1em 2%;
+	padding: .5em;
 	float: left;
 	background: rgb(255,255,255);
 	background: rgba(255,255,255, 0.5);
@@ -68,4 +73,15 @@ footer {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
+}
+.search-bar {
+	float: right;
+	margin: 1em;
+}
+.button {
+	padding: .4em;
+	border: none;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
 }

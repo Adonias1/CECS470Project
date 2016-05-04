@@ -20,6 +20,11 @@ if ($error != null) {
 	<div class="main-content">
 		<?php include "includes/header.php"; ?>
 
+		<form class="search-bar" action="#" method="post">
+			<input class="button" type="submit" name="submit" value="Search Projects">
+			<input type="search" name="search" value="">
+		</form>
+
 		<!-- GENERATE TV EXPREIENCE FROM DATABASE -->
 		<h1 class="resume-title">Television Roles</h1>
 		<table class="resume">
