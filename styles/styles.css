@@ -9,13 +9,9 @@ html {
 	max-width: 900px;
 }
 html, body {
-	/*height: 100%;*/
 	margin: 0 auto;
-	/*overflow: auto;*/
 }
 body {
-	/*background-color: black;*/
-	/*background-color: #BEBEC0;*/
 	background-repeat: no-repeat;
 }
 .main-content {
@@ -75,7 +71,6 @@ footer {
 	margin: 2em 0em 0em 0em;
 	padding: 2em;
 	width: 100%;
-	/*position: absolute;*/
 	bottom: 0;
 }
 .search-bar {

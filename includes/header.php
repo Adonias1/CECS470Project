@@ -1,5 +1,7 @@
 <header>
-	<h1 class="rachel-title"><a href="index.php">Rachel Lockhart</a></h1>
+	<div id="logo">
+		<h1 class="rachel-title"><a href="index.php">Rachel Lockhart</a></h1>
+	</div>
 	<nav>
 		<li><a href="index.php">Home</a></li>
 		<li><a href="resume.php">Resume</a></li>
