@@ -1,26 +1,32 @@
 p, h1, h2, h3, h4, h5, h6 {
 	font-family: sans-serif;
 }
+html {
+	background-image:url("../images/headshot1Shop.jpg");
+	background-repeat: no-repeat;
+	background-position:top;
+	background-size: 1000px;
+	max-width: 900px;
+}
 html, body {
-	height: 100%;
-	width: 100%;
-	max-width: 1200px;
+	/*height: 100%;*/
 	margin: 0 auto;
-	padding: 1em;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 body {
-	padding: 1em;
-	background-color: black;
+	/*background-color: black;*/
+	/*background-color: #BEBEC0;*/
+	background-repeat: no-repeat;
 }
 .main-content {
 	/*TODO background image for all pages (Besides homepage)*/
-	background-color: #BEBEC0;
+	/*background-color: #BEBEC0;
 	height: 100%;
 	width: 100%;
+	padding: 1em;*/
 }
 .homepage {
-	background-image:url("../images/headshot1.jpg");
+	/*background-image:url("../images/headshot1.jpg");*/
 	background-repeat: no-repeat;
 }
 .rachel-title {
@@ -33,10 +39,20 @@ body {
 	text-decoration: none;
 	color: black;
 }
+#logo {
+	margin-bottom: 4%;
+}
+.resume-title {
+	font-size: 1.4em;
+}
+.resume {
+	width: 75%;
+	margin: 0em 0em 2em 2em;
+}
 /*NAVIGATION*/
 nav {
-	margin: 1em 0em 1em 5%;
-	padding: 1.1em;
+	margin: 1em 2% 1em 2%;
+	padding: .5em;
 	float: left;
 	background: rgb(255,255,255);
 	background: rgba(255,255,255, 0.5);
@@ -46,7 +62,7 @@ nav a {
 	text-decoration: none;
 	font-weight: bold;
 	color: black;
-	font-size: 1.5em;
+	font-size: 1.1em;
 }
 nav li {
 	padding: 1em 1em 1em 2em;
@@ -59,6 +75,17 @@ footer {
 	margin: 2em 0em 0em 0em;
 	padding: 2em;
 	width: 100%;
-	position: absolute;
+	/*position: absolute;*/
 	bottom: 0;
+}
+.search-bar {
+	float: right;
+	margin: 1em;
+}
+.button {
+	padding: .4em;
+	border: none;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
 }
