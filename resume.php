@@ -1,6 +1,6 @@
 #!/usr/local/php5/bin/php-cgi
 <?php
-$connection = mysqli_connect("cecs-db01.coe.csulb.edu", "cecs323o31", "eifugh", "cecs323o31");
+$connection = mysqli_connect("cecs-db01.coe.csulb.edu", "cecs323o31", "eifugh", "cecs470g6");
 $error = mysqli_connect_error();
 //if there is a connection error...
 if ($error != null) {
@@ -19,6 +19,11 @@ if ($error != null) {
 <body>
 	<div class="main-content">
 		<?php include "includes/header.php"; ?>
+
+		<form class="search-bar" action="#" method="post">
+			<input type="button" name="submit" value="Search Projects">
+			<input type="search" name="search" value="">
+		</form>
 
 		<!-- GENERATE TV EXPREIENCE FROM DATABASE -->
 		<h1 class="resume-title">Television Roles</h1>
