@@ -21,11 +21,7 @@ if ($error != null) {
 		<?php include "includes/header.php"; ?>
 
 		<form class="search-bar" action="#" method="post">
-<<<<<<< HEAD
 			<input type="button" name="submit" value="Search Projects">
-=======
-			<input class="button" type="submit" name="submit" value="Search Projects">
->>>>>>> origin/Brick
 			<input type="search" name="search" value="">
 		</form>
 
