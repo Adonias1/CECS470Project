@@ -2,20 +2,16 @@ p, h1, h2, h3, h4, h5, h6 {
 	font-family: sans-serif;
 }
 html {
-	background-image:url("../images/headshot1.jpg");
+	background-image:url("../images/headshot1Shop.jpg");
 	background-repeat: no-repeat;
 	background-position:top;
-	/*background-size: 100% 100%;*/
-	max-width: 1200px;
+	background-size: 1000px;
+	max-width: 900px;
 }
 html, body {
-	/*height: 100%;*/
 	margin: 0 auto;
-	/*overflow: auto;*/
 }
 body {
-	/*background-color: black;*/
-	/*background-color: #BEBEC0;*/
 	background-repeat: no-repeat;
 }
 .main-content {
@@ -75,7 +71,6 @@ footer {
 	margin: 2em 0em 0em 0em;
 	padding: 2em;
 	width: 100%;
-	/*position: absolute;*/
 	bottom: 0;
 }
 .search-bar {
