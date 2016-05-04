@@ -2,7 +2,7 @@ p, h1, h2, h3, h4, h5, h6 {
 	font-family: sans-serif;
 }
 html {
-	background-image:url("../images/headshot1Shop.jpg");
+	background-color: #BEBEC0;
 	background-repeat: no-repeat;
 	background-position:top;
 	background-size: 1000px;
@@ -13,17 +13,12 @@ html, body {
 }
 body {
 	background-repeat: no-repeat;
-	margin-left: 
 }
 .main-content {
-	/*TODO background image for all pages (Besides homepage)*/
-	/*background-color: #BEBEC0;
-	height: 100%;
-	width: 100%;
-	padding: 1em;*/
+	/*margin-left: 30%;*/
 }
 .homepage {
-	/*background-image:url("../images/headshot1.jpg");*/
+	background-image:url("../images/headshot1Shop.jpg");
 	background-repeat: no-repeat;
 }
 .rachel-title {
@@ -43,7 +38,7 @@ body {
 	font-size: 1.4em;
 }
 .resume {
-	width: 75%;
+	width: 74%;
 	margin: 0em 0em 2em 2em;
 }
 /*NAVIGATION*/
@@ -51,10 +46,12 @@ nav {
 	margin: 1em 2% 1em 2%;
 	padding: .5em;
 	float: left;
+	width: 20%;
+	max-width: 150px;
+	min-width: 130px;
 	background: rgb(255,255,255);
 	background: rgba(255,255,255, 0.5);
 	border-radius: 50px;
-	height: 100%;
 }
 nav a {
 	text-decoration: none;
@@ -87,9 +84,9 @@ footer {
 	font-size: 14px;
 }
 .reel {
-	width: 37%;
+	width: 30%;
 	min-width: 250px;
 	float: right;
 	display: inline;
-	margin: 8px;
+	margin: 5px;
 }
