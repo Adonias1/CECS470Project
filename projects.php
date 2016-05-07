@@ -6,9 +6,8 @@
 </head>
 
 <body>
+	<?php include "includes/header.php"; ?>
 	<div class="main-content">
-		<?php include "includes/header.php"; ?>
-
 		<!--TODO FILL IN BODY -->
 
 		<?php include "includes/footer.php"; ?>

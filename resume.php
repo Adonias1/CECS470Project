@@ -17,8 +17,8 @@ if ($error != null) {
 </head>
 
 <body>
+	<?php include "includes/header.php"; ?>
 	<div class="main-content">
-		<?php include "includes/header.php"; ?>
 
 		<form class="search-bar" action="#" method="post">
 			<input type="button" name="submit" value="Search Projects">
