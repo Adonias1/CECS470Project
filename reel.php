@@ -10,20 +10,28 @@
 	<div class="main-content">
 		<!--TODO FILL IN BODY -->
 		<!-- Love and Miss Lily -->
-		<h2 class="reel-title">Love and Miss Lily</h2>
-		<iframe class="reel" width="560" height="315" src="https://www.youtube.com/embed/a-vJ-RwiukU" allowfullscreen></iframe>
+		<figure class="aspect-ratio">
+			<figcaption><h2 class="reel-title">Love and Miss Lily</h2></figcaption>
+			<iframe class="reel" src="https://www.youtube.com/embed/a-vJ-RwiukU" allowfullscreen></iframe>
+		</figure>
 
 		<!-- Kra Magaga -->
-		<h2 class="reel-title">Kra Magaga</h2>
-		<iframe class="reel" width="560" height="315" src="https://www.youtube.com/embed/U-lEYLmSsLQ" allowfullscreen></iframe>
+		<figure class="aspect-ratio">
+			<figcaption><h2 class="reel-title">Kra Magaga</h2><figcaption>
+			<iframe class="reel" width="560" height="315" src="https://www.youtube.com/embed/U-lEYLmSsLQ" allowfullscreen></iframe>
+		</figure>
 
 		<!-- Kra Magaga 2 -->
-		<h2 class="reel-title">Kra Magaga 2</h2>
-		<iframe class="reel" width="560" height="315" src="https://www.youtube.com/embed/MpY9H-EKkyc" allowfullscreen></iframe>
+		<figure class="aspect-ratio">
+			<figcaption><h2 class="reel-title">Kra Magaga 2</h2></figcaption>
+			<iframe class="reel" width="560" height="315" src="https://www.youtube.com/embed/MpY9H-EKkyc" allowfullscreen></iframe>
+		</figure>
 
 		<!-- Schindler -->
-		<h2 class="reel-title">Schindler</h2>
-		<iframe class="reel" width="560" height="315" src="https://www.youtube.com/embed/enkpVpLt-cQ" allowfullscreen></iframe>
+		<figure class="aspect-ratio">
+			<figcaption><h2 class="reel-title">Schindler</h2></figcaption>
+			<iframe class="reel" width="560" height="315" src="https://www.youtube.com/embed/enkpVpLt-cQ" allowfullscreen></iframe>
+		</figure>
 
 		<?php include "includes/footer.php"; ?>
 	</div>
