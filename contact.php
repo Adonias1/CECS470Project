@@ -45,13 +45,13 @@
 		    			$lNameErr = "Last Name is required";
    				} 
    				else{
-     					$orderString .= "Last Name: ".$_POST["lastname"]."\n";
+     				$orderString .= "Last Name: ".$_POST["lastname"]."\n";
    				}
    				if (empty($_POST["email"])) {
-     					$emailErr = "Email is required";
+     				$emailErr = "Email is required";
    				} 
    				else{
-     					$orderString .= "Email: ".$_POST["email"]."\n";
+     				$orderString .= "Email: ".$_POST["email"]."\n";
    				}
    			}
    			?>                                                          
