@@ -39,7 +39,8 @@ body {
 }
 .resume {
 	width: 100%;
-	margin: 0em 0em 2em 2em;
+	margin-bottom: 4em;
+	border-top: 3px solid black;
 }
 /*NAVIGATION*/
 nav {
