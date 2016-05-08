@@ -1,13 +1,13 @@
 #!/usr/local/php5/bin/php-cgi
 <!DOCTYPE HTML>
-<html>
+<html class="homepage">
 <head>
 	<?php include "includes/head.php" ?>
 </head>
 
 <body>
-	<div class="main-content homepage">
-		<?php include "includes/header.php"; ?>
+	<?php include "includes/header.php"; ?>
+	<div class="main-content">
 
 		<!-- FILL IN BODY -->
 
