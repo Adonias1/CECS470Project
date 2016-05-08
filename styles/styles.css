@@ -63,6 +63,8 @@ nav li {
 	font-family: serif;
 	font-size: 1.1em;
 }
+
+/*FOOTER*/
 footer {
 	clear:left;
 	margin: 2em 0em 0em 0em;
@@ -70,6 +72,13 @@ footer {
 	width: 100%;
 	bottom: 0;
 }
+.social-icon {
+	display: inline-block;
+	float:right;
+	margin-left: 1em;
+}
+
+
 .search-bar {
 	float: right;
 	margin: 1em;
