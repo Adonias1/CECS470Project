@@ -1,6 +1,7 @@
 p, h1, h2, h3, h4, h5, h6 {
 	font-family: sans-serif;
 }
+h1 {font-size: 2em;} h2 {font-size: 1.5em;} h3 {font-size: 1.25em;}
 html {
 	background-image: url("../images/background.jpg");
 	/*background-color: #BEBEC0;*/
@@ -23,19 +24,17 @@ body {
 	padding: 2em;
 	border-radius: 30px;
 }
-.rachel-title {
-	padding: 2em 2em 0em 2em;
+#logo {
 	text-align: center;
 }
-.rachel-title a {
-	font-size: 6em;
-	font-family:Edwardian Script ITC, script;
+#logo h1 a, #logo h2 a {
+	font-size: 4em;
+	font-family:Edwardian Script ITC, tahoma, serif;
 	text-decoration: none;
 	color: black;
 }
-#logo {
-	margin-bottom: 4%;
-}
+#logo h2 a { font-size: 2em;}
+
 /*NAVIGATION*/
 nav {
 	float: left;
