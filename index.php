@@ -8,9 +8,7 @@
 <body>
 	<?php include "includes/header.php"; ?>
 	<div class="main-content">
-
-		<!-- FILL IN BODY -->
-
+		<img class="homepage" width="100%" src="images/headshot1Shop.jpg" alt="Rachel Lockhart Homepage headshot" />
 		<?php include "includes/footer.php"; ?>
 	</div>
 </body>

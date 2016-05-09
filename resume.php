@@ -25,6 +25,8 @@ if ($error != null) {
 			<input type="search" name="search" value="">
 		</form>
 
+		<h1 class="resume-title" align="center"><a href="resume.pdf" target="_blank">Download PDF Resume</a></h1><br>
+
 		<!-- GENERATE TV EXPREIENCE FROM DATABASE -->
 		<h1 class="resume-title">Television Roles</h1>
 		<table class="resume">
@@ -33,7 +35,7 @@ if ($error != null) {
 			</tr>
 		<?php
 		//create the sql statement
-		$sql = "SELECT * FROM cecs323o31.tv_roles";
+		$sql = "SELECT * FROM cecs470g6.tv_roles";
 
 		//exectue the query
 		$result = mysqli_query($connection, $sql);
@@ -64,7 +66,7 @@ if ($error != null) {
 			</tr>
 		<?php
 		//create the sql statement
-		$sql = "SELECT * FROM cecs323o31.film_roles";
+		$sql = "SELECT * FROM cecs470g6.film_roles";
 
 		//exectue the query
 		$result = mysqli_query($connection, $sql);
@@ -95,29 +97,84 @@ if ($error != null) {
 				<th>Project</th><th>Role</th><th>Theater</th>
 			</tr>
 			<?php
-			//create the sql statement
-			$sql = "SELECT * FROM cecs323o31.theater_roles";
+				//create the sql statement
+				$sql = "SELECT * FROM cecs470g6.theater_roles";
 
-			//exectue the query
+				//exectue the query
+				$result = mysqli_query($connection, $sql);
+
+				//loop through the result set
+				if ($result = mysqli_query($connection, $sql)) {
+				  // Fetch one and one row
+				  while ($row = mysqli_fetch_assoc($result)) {
+						echo "<tr>";
+						echo "<td>" . $row["project"] . "</td>";
+						echo "<td>" . $row["roles"] . "</td>";
+						echo "<td>" . $row["theater"] . "</td>";
+						echo"</tr>";
+				  }
+				  // Free result set
+				  mysqli_free_result($result);
+				} else {
+			  	echo "no result<br>";
+				}
+			?>
+			</table>
+
+			<!-- GENERATE INDUSTRIALS EXPERIENCE FROM DATABASE -->
+			<h1 class="resume-title">Industrials</h1>
+			<table class="resume">
+				<tr>
+					<th>Company</th><th>Role</th><th>Director</th>
+				</tr>
+
+			<?php
+			$sql = "SELECT * FROM cecs470g6.industrial_roles";
+
 			$result = mysqli_query($connection, $sql);
 
-			//loop through the result set
 			if ($result = mysqli_query($connection, $sql)) {
-		  // Fetch one and one row
-		  while ($row = mysqli_fetch_assoc($result)) {
-				echo "<tr>";
-				echo "<td>" . $row["project"] . "</td>";
-				echo "<td>" . $row["roles"] . "</td>";
-				echo "<td>" . $row["theater"] . "</td>";
-				echo"</tr>";
-		  }
-		  // Free result set
-		  mysqli_free_result($result);
+				while ($row = mysqli_fetch_assoc($result)) {
+					echo "<tr>";
+					echo "<td>" . $row["project"] . "</td>";
+					echo "<td>" . $row["roles"] . "</td>";
+					echo "<td>" . $row["prod_dir"] . "</td>";
+					echo"</tr>";
+				}
+				mysqli_free_result($result);
 			} else {
-		  echo "no result<br>";
+				echo "no result <br />";
 			}
-			?>
-		</table>
+			 ?>
+			</table>
+
+
+			<!-- GENERATE TRAINING FROM DATABASE -->
+			<h1 class="resume-title">Training</h1>
+			<table class="resume">
+				<tr>
+					<th>Company</th><th>Role</th><th>Director</th>
+				</tr>
+
+			<?php
+			$sql = "SELECT * FROM cecs470g6.training";
+
+			$result = mysqli_query($connection, $sql);
+
+			if ($result = mysqli_query($connection, $sql)) {
+				while ($row = mysqli_fetch_assoc($result)) {
+					echo "<tr>";
+					echo "<td>" . $row["location"] . "</td>";
+					echo "<td>" . $row["type_of_training"] . "</td>";
+					echo "<td>" . $row["instructor"] . "</td>";
+					echo"</tr>";
+				}
+				mysqli_free_result($result);
+			} else {
+				echo "no result <br />";
+			}
+			 ?>
+			</table>
 
 		<!--TODO FILL IN BODY -->
 
