@@ -325,6 +325,11 @@ fieldset .button {
     border-radius: 5px;
 }
 #mainForm {
-    width: 80%;
-    margin: 0 auto;
+	position: relative;	
+	text-align: center;
+}
+
+.button{
+	background-color: black;
+	color: white;
 }

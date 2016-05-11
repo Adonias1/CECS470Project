@@ -1,5 +1,4 @@
 <header>
-<<<<<<< HEAD
 	<div id="logo">
 		<h1 class="rachel-title"><a href="index.php">Rachel Lockhart</a></h1>
 
@@ -14,7 +13,6 @@
 		<!-- <li><a href="about.php">About</a></li> -->
 		<li><a href="contact.php">Contact</a></li>
 	</nav>
-=======
 		<img id="logo" src="images/loggo.png" alt="Rachel Lockhart" />
 		<!-- <h1 class="rachel-title"><a href="index.php">Rachel Lockhart</a></h1>
 		<h2 class="rachel-title"><a href="index.php">Actress</a></h2> -->
@@ -38,5 +36,4 @@
 	    document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
 	}
 	</script>
->>>>>>> refs/remotes/origin/master
 </header>

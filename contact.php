@@ -31,7 +31,6 @@
 
 		<form id = "mainForm" action = "contact.php" method = "POST">
 		<?php
-<<<<<<< HEAD
 		if($_SERVER["REQUEST_METHOD"]=="POST"){
 			if(!empty($_POST["firstname"])){
 				echo "<fieldset><legend>Message Confirmation</legend>";
@@ -42,8 +41,6 @@
 		}
 		?>
 		<?php
-=======
->>>>>>> refs/remotes/origin/master
 			// define variables and set to empty values
 			$fNameErr = $lNameErr = $emailErr = $requiredFields = "";
 			$reqBool = true;
@@ -81,7 +78,6 @@
    				}
 				if (!empty($_POST['message'])) {
 					$contactString .= "Message: ". $_POST['message']."\n";
-<<<<<<< HEAD
 				}
 				if ($reqBool != true){
    					$requiredFields = "* Required Fields";
@@ -107,8 +103,6 @@
 				}
    			}
 			mysqli_close($connection);
-   		?>	
-=======
 				}
 				if($reqBool == true){
 
@@ -133,7 +127,6 @@
    			}
 
    		?>
->>>>>>> refs/remotes/origin/master
 			<section>
 				<fieldset>
 					<!-- <h3>Enter Personal Info: </h3> -->
