@@ -21,8 +21,6 @@ if ($error != null) {
   // Outputs a message and terminates the current script
   exit($output);
   }
-  else{ $output = "<p>Connected to Database</p>";}
-  echo $output;
 ?>
 
 <body>
@@ -72,6 +70,10 @@ if ($error != null) {
      				$emailErr = "* Email is required";
      				$reqBool = false;
    				}
+				else if(!(preg_match('/^(.+)@([^\.].*)\.([a-z]{2,})$/',$_POST["email"]))){
+					$emailErr = "* Invalid Email Format";
+					$reqBool = false;
+				}
    				else{
      				$contactString .= "Email: ".$_POST["email"]."\n";
    				}
@@ -81,24 +83,23 @@ if ($error != null) {
 					if (!empty($_POST['message'])) {
 						$contactString .= "Message: ". $_POST['message']."\n";
 					}
+				if($reqBool == true){
+					$sql = "INSERT INTO Prospects(FirstName, LastName, Email, Message) VALUES('".$_POST["firstname"]."', 
+						'".$_POST["lastname"]."', '".$_POST["email"]."', '".$_POST["message"]."')";
+					//echo "before query<br>";
+					//exectue the query
+					//echo "after query<br>";
+					//find out how many rows are in the result set
+					$numrows=mysqli_num_rows($result);
+					//echo "The number of rows is: ".$numrows."<br>";
+					//loop through the result set
+					if (mysqli_query($connection, $sql)){
+						echo "Data was successfully set <br>";
+					}
+					else { echo "Data was not set<br>";}
+				}
    			}
 			
-			if($reqBool == true){
-				$sql = "INSERT INTO Prospects(FirstName, LastName, Email, Message) VALUES('".$_POST["firstname"]."', 
-				'".$_POST["lastname"]."', '".$_POST["email"]."', '".$_POST["message"]."')";
-				//echo "before query<br>";
-				//exectue the query
-				$result = mysqli_query($connection, $sql);
-				//echo "after query<br>";
-				//find out how many rows are in the result set
-				$numrows=mysqli_num_rows($result);
-				//echo "The number of rows is: ".$numrows."<br>";
-				//loop through the result set
-				if (mysqli_query($connection, $sql)){
-					echo "Data was successfully set <br>";
-				}
-				else { echo "Data was not set<br>";}
-			}
    		?>
 			<section>
 				<fieldset>
@@ -120,7 +121,7 @@ if ($error != null) {
 					<textarea name="message" form='mainForm' rows="6" cols="50"></textarea>
 					<br>
 					<input id="contact" class="button" type="submit" value="Send">
-					<input id="reset" class="button" type="reset" value="reset">
+					<input id="reset" class="button" type="reset" value="Reset">
 				</fieldset>
 			</section>
 		</form>
