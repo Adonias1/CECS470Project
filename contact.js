@@ -25,7 +25,7 @@ window.onload=function() {
 	var field = document.getElementById("mainForm");
 	if(bool==false) {
 		event.preventDefault();
-		alert("You must fill out the required fields");
+		alert("Please fill out the highlighted fields");
 	} 
 	return bool;
 	}

@@ -17,30 +17,6 @@
 		// Outputs a message and terminates the current script
 		exit($output);
 	}
-  	//echo "connected<br>";
-  	//create the sql statement
-  	$sql = "INSERT INTO Prospects";
-  	//echo "before query<br>";
-  	//exectue the query
-  	$result = mysqli_query($connection, $sql);
-  	//echo "after query<br>";
-  	//find out how many rows are in the result set
-  	$numrows=mysqli_num_rows($result);
-  	//echo "The number of rows is: ".$numrows."<br>";
-  	//loop through the result set
-  	if ($result=mysqli_query($connection,$sql)){
-    // Fetch one and one row
-    while ($row=mysqli_fetch_assoc($result)){
-                echo $row["FirstName"]." ".$row["LastName"];
-				echo $row["Email"];
-				echo $row["Message"];
-      }
-
-    // Free result set
-    mysqli_free_result($result);
-
-  }
-  else { echo "no result<br>";}
 ?>
 
 <body>
@@ -53,7 +29,7 @@
 		</p><br>
 
 
-		<form id = "mainForm" action = "" method = "POST">
+		<form id = "mainForm" action = "contact.php" method = "POST">
 		<?php
 		if($_SERVER["REQUEST_METHOD"]=="POST"){
 			if(!empty($_POST["firstname"])){
@@ -99,50 +75,44 @@
 				if (!empty($_POST['message'])) {
 					$contactString .= "Message: ". $_POST['message']."\n";
 				}
+				if ($reqBool != true){
+   					$requiredFields = "* Required Fields";
+   				}
+				if (!empty($_POST['message'])) {
+						$contactString .= "Message: ". $_POST['message']."\n";
+					}
+				if($reqBool == true){
+					$sql = "INSERT INTO Prospects(FirstName, LastName, Email, Message) VALUES('".$_POST["firstname"]."', 
+						'".$_POST["lastname"]."', '".$_POST["email"]."', '".$_POST["message"]."')";
+					//echo "before query<br>";
+					//exectue the query
+					//echo "after query<br>";
+					//find out how many rows are in the result set
+					$numrows=mysqli_num_rows($result);
+					//echo "The number of rows is: ".$numrows."<br>";
+					//loop through the result set
+					if (mysqli_query($connection, $sql)){
+						echo "Data was successfully set <br>";
+					}
+					else { echo "Data was not set<br>";}
+				}
    			}
 			
-			if($reqBool == true){
-				$sql = "INSERT INTO Prospects(FirstName, LastName, Email, Message) VALUES('".$firstname."', 
-				'".$lastname."', '".$email."', '".$message."')";
-				//echo "before query<br>";
-				//exectue the query
-				$result = mysqli_query($connection, $sql);
-				//echo "after query<br>";
-				//find out how many rows are in the result set
-				$numrows=mysqli_num_rows($result);
-				//echo "The number of rows is: ".$numrows."<br>";
-				//loop through the result set
-				if ($result=mysqli_query($connection,$sql)){
-					// Fetch one and one row
-					while ($row=mysqli_fetch_assoc($result)){
-						echo $row["FirstName"]." ".$row["LastName"];
-						echo $row["Email"];
-						echo $row["Message"];
-					}
-
-    					// Free result set
-					mysqli_free_result($result);
-
-				}
-				else { 
-					echo "no result<br>";
-				}
-			}
-   		?>
+   		?>	
 			<section>
 				<fieldset>
 					<!-- <h3>Enter Personal Info: </h3> -->
 					<p><span class = "error"><?php echo $requiredFields;?></span></p>
 					<label>First Name:</label><br/>
-					<input id = fname type="text" name="firstname" size="30" required>
+					<input id = fname type="text" name="firstname" size="30">
 					<span class = "error"><?php echo $fNameErr;?></span><br>
 					<br>
 					<label>Last Name:</label><br/>
-					<input id = lname type="text" name="lastname" size="30" required>
+					<input id = lname type="text" name="lastname" size="30">
 					<span class = "error"><?php echo $lNameErr;?></span><br>
 					<br>
 					<label>Email:</label><br>
-					<input id = email type="email" name="email" size="30" required>
+					<input id = email type="email" name="email" size="30">
 					<span class = "error"><?php echo $emailErr;?></span><br>
 					<br>
 					<label><p>Message:</p></label>
