@@ -64,7 +64,7 @@ if ($error != null) {
 			}
 		?>
 	</table>
-
+		<?php
 		//create the sql statement
 		$sql = "SELECT * FROM cecs323o31.tv_roles";
 
