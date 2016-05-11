@@ -19,11 +19,9 @@ body {
 	margin-bottom: 1em;
 }
 .main-content {
-	margin-left: 16%;
-	background: rgb(255,255,255);
-	background: rgba(255,255,255, 0.5);
-	padding: 2em;
-	border-radius: 30px;
+    background: rgba(255, 255, 255, 0.4) none repeat scroll 0 0;
+    border-radius: 20px;
+    padding: 2em;
 }
 #logo {
 	text-align: center;
@@ -38,26 +36,21 @@ body {
 
 /*NAVIGATION*/
 nav {
-	float: left;
-	width: 15%;
-	max-width: 200px;
-	min-width: 130px;
-	background: rgb(255,255,255);
-	background: rgba(255,255,255, 0.5);
-	border-radius: 30px;
-	text-align: center;
+    border-radius: 30px;
+    margin: 1em;
+    text-align: center;
 }
 nav a {
-	text-decoration: none;
-	font-weight: bold;
-	color: black;
-	font-size: 1.1em;
+    color: black;
+    font-weight: bold;
+    padding: 1em;
+    text-decoration: none;
+    font-size: 1.3em;
 }
 nav li {
-	padding: 1em 1em 1em 1em;
-	list-style: none;
-	font-family: ca, arial, sans-serif;;
-	font-size: 1.1em;
+    display: inline;
+    font-family: ca,arial,sans-serif;
+    list-style: outside none none;
 }
 
 /*FOOTER*/
@@ -270,9 +263,14 @@ legend {
 	font-family: sans-serif;
 }
 fieldset {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 fieldset .button {
-	margin: .5em .5em .5em 0;
-	border: solid black 1px;
+    border: 1px solid grey;
+    margin: 0.5em 0.5em 0.5em 0;
+    border-radius: 5px;
+}
+#mainForm {
+    width: 80%;
+    margin: 0 auto;
 }
