@@ -151,7 +151,7 @@ if ($error != null) {
 					<span class = "error"><?php echo $emailErr;?></span><br>
 					<br>
 					<label><p>Message:</p></label>
-					<textarea name="message" form='mainForm' rows="6" cols="40"></textarea>
+					<textarea name="message" form='mainForm' rows="6" cols="50"></textarea>
 					<br>
 					<input id="contact" class="button" type="submit" value="Send">
 					<input id="reset" class="button" type="reset" value="reset">
