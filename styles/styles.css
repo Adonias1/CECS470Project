@@ -1,64 +1,277 @@
 p, h1, h2, h3, h4, h5, h6 {
 	font-family: sans-serif;
+	font-size: 1.1em;
+}
+h1 {font-size: 2em;} h2 {font-size: 1.5em;} h3 {font-size: 1.25em;} p {margin-bottom: 1em;}
+html {
+	background-image: url("../images/background.jpg");
+	background-repeat:repeat;
+	max-width: 900px;
 }
 html, body {
-	height: 100%;
-	width: 100%;
-	max-width: 1200px;
 	margin: 0 auto;
-	padding: 1em;
-	overflow: auto;
 }
 body {
-	padding: 1em;
-	background-color: black;
-}
-.main-content {
-	/*TODO background image for all pages (Besides homepage)*/
-	background-color: #BEBEC0;
-	height: 100%;
-	width: 100%;
-}
-.homepage {
-	background-image:url("../images/headshot1.jpg");
 	background-repeat: no-repeat;
 }
-.rachel-title {
-	padding: 2em 2em 0em 2em;
+.homepage {
+	width: 100%;
+}
+.main-content {
+	margin-left: 16%;
+	background: rgb(255,255,255);
+	background: rgba(255,255,255, 0.5);
+	padding: 2em;
+	border-radius: 30px;
+}
+#logo {
 	text-align: center;
 }
-.rachel-title a {
-	font-size: 6em;
-	font-family:Edwardian Script ITC, script;
+#logo h1 a, #logo h2 a {
+	font-size: 4em;
+	font-family:Edwardian Script ITC, tahoma, serif;
 	text-decoration: none;
 	color: black;
 }
+#logo h2 a { font-size: 2em;}
+
 /*NAVIGATION*/
 nav {
-	margin: 1em 0em 1em 5%;
-	padding: 1.1em;
 	float: left;
+	width: 15%;
+	max-width: 200px;
+	min-width: 130px;
 	background: rgb(255,255,255);
 	background: rgba(255,255,255, 0.5);
-	border-radius: 50px;
+	border-radius: 30px;
+	text-align: center;
 }
 nav a {
 	text-decoration: none;
 	font-weight: bold;
 	color: black;
-	font-size: 1.5em;
-}
-nav li {
-	padding: 1em 1em 1em 2em;
-	list-style: none;
-	font-family: serif;
 	font-size: 1.1em;
 }
+nav li {
+	padding: 1em 1em 1em 1em;
+	list-style: none;
+	font-family: ca, arial, sans-serif;;
+	font-size: 1.1em;
+}
+
+/*FOOTER*/
 footer {
 	clear:left;
-	margin: 2em 0em 0em 0em;
-	padding: 2em;
+	overflow: auto;
 	width: 100%;
-	position: absolute;
 	bottom: 0;
+	margin-top: 1.5em;
+}
+.social-icon {
+	display: inline-block;
+	float:right;
+	margin-left: 1em;
+}
+
+
+.search-bar {
+	float: right;
+	margin: 1em;
+}
+.button {
+	padding: .4em;
+	border: none;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+/*REEL PAGE STYLES*/
+.reel {
+	display: block;
+	margin: 0 auto;
+	min-width: 250px;
+	min-height:150px;
+	width: 80%;
+	margin-top: 10px;
+	/*width="560" height="315*/
+}
+.reel-title {
+	text-align: center;
+	margin: 2em 0em 0em 0em;
+}
+.aspect-ratio {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56%;
+	margin-bottom: 15px;
+}
+iframe {
+	width: 100%;
+}
+.aspect-ratio iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+/*ABOUT PAGE STYLES*/
+#about-image {
+	float: left;
+	margin-right: 1em;
+	width: 40%;
+	max-width: 300px;
+	min-width: 200px;
+}
+
+/*HEADSHOT PAGE STYLES*/
+figure {
+    width: 30%;
+    display: inline-block;
+	 min-width: 150px;
+	 margin-bottom:
+}
+.headshot-gallery {
+    width: 100%;
+}
+/**************SPECIAL STYLES FOR HEADSHOT LIGHTBOX****************/
+/*Eliminates padding, centers the thumbnail */
+/* Styles the thumbnail */
+a.lightbox img {
+height: 100%;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+width: 97%;
+}
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+.lightbox-target {
+position: absolute;
+top: -100%;
+left: 0;
+width: 100%;
+background: rgba(0,0,0,.7);
+width: 100%;
+opacity: 0;
+-webkit-transition: opacity .5s ease-in-out;
+-moz-transition: opacity .5s ease-in-out;
+-o-transition: opacity .5s ease-in-out;
+transition: opacity .5s ease-in-out;
+overflow: hidden;
+}
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+.lightbox-target img {
+margin: auto;
+position: absolute;
+top: 0;
+left:10%;
+right:10%;
+bottom: 0;
+max-height: 0%;
+max-width: 0%;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+box-sizing: border-box;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+/* Styles the close link, adds the slide down transition */
+a.lightbox-close {
+display: block;
+width:50px;
+height:50px;
+box-sizing: border-box;
+background: white;
+color: black;
+text-decoration: none;
+position: absolute;
+top: -80px;
+right: 0;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+/* Provides part of the "X" to eliminate an image from the close link */
+a.lightbox-close:before {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+/* Provides part of the "X" to eliminate an image from the close link */
+a.lightbox-close:after {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
+transform:rotate(-45deg);
+}
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
+}
+.lightbox-target:target img {
+max-height: 100%;
+max-width: 100%;
+}
+.lightbox-target:target a.lightbox-close {
+top: 0px;
+}
+
+/*********RESUME TABLE STYLES*********/
+.resume-title {
+	font-size: 1.4em;
+	margin: 2em 0em .4em 0em;
+	text-align: center;
+	clear: right;
+}
+.resume {
+	width: 100%;
+	border-collapse: collapse;
+}
+tr {
+	border-top: 1px solid lightgray;
+}
+td {
+	padding: .3em;
+}
+th {
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+	text-align: left;
+}
+
+/*****************FORM STYLES************************/
+legend {
+	font-size: 1.6em;
+	font-family: sans-serif;
+}
+fieldset {
+	margin-bottom: 30px;
+}
+fieldset .button {
+	margin: .5em .5em .5em 0;
+	border: solid black 1px;
 }
