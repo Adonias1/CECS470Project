@@ -6,7 +6,7 @@
 	?>
 <head>
 	<?php include "includes/head.php" ?>
-	<script src="contact.js"></script>
+	<script src="js/contact.js"></script>
 </head>
 <?php
 	$connection = mysqli_connect("cecs-db01.coe.csulb.edu","cecs323o32","iehohx","cecs470g6");
@@ -109,10 +109,10 @@
 					<span class = "error"><?php echo $emailErr;?></span><br>
 					<br>
 					<label>Message:</label><br>
-					<textarea name="message" form='mainForm' rows="6" cols="50"></textarea>
+					<textarea name="message" form='mainForm' rows="6" cols="30"></textarea>
 					<br>
 					<input id="contact" class="button" type="submit" value="Send">
-					<input id="reset" class="button" type="reset" value="reset">
+					<input id="reset" class="button" type="reset" value="Reset">
 				</fieldset>
 			</section>
 		</form>

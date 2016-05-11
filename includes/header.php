@@ -1,5 +1,5 @@
 <header>
-		<img id="logo" src="images/loggo.png" alt="Rachel Lockhart" />
+		<a href="index.php"><img id="logo" src="images/loggo.png" alt="Rachel Lockhart" /></a>
 		<!-- <h1 class="rachel-title"><a href="index.php">Rachel Lockhart</a></h1>
 		<h2 class="rachel-title"><a href="index.php">Actress</a></h2> -->
 

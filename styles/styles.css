@@ -132,6 +132,8 @@ footer {
 	text-align: center;
 	text-decoration: none;
 	font-size: 14px;
+	background: #333333;
+	color: white
 }
 
 /*REEL PAGE STYLES*/
@@ -325,6 +327,6 @@ fieldset .button {
     border-radius: 5px;
 }
 #mainForm {
-    width: 80%;
-    margin: 0 auto;
+    position: relative;
+	 text-align: center;
 }
