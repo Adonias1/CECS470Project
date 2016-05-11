@@ -1,11 +1,11 @@
 p, h1, h2, h3, h4, h5, h6 {
 	font-family: sans-serif;
+	font-size: 1.1em;
 }
+h1 {font-size: 2em;} h2 {font-size: 1.5em;} h3 {font-size: 1.25em;} p {margin-bottom: 1em;}
 html {
-	background-color: #BEBEC0;
-	background-repeat: no-repeat;
-	background-position:top;
-	background-size: 1000px;
+	background-image: url("../images/background.jpg");
+	background-repeat:repeat;
 	max-width: 900px;
 }
 html, body {
@@ -14,42 +14,37 @@ html, body {
 body {
 	background-repeat: no-repeat;
 }
-.main-content {
-	margin-left: 25%;
-}
 .homepage {
-	background-image:url("../images/headshot1Shop.jpg");
-	background-repeat: no-repeat;
+	width: 100%;
 }
-.rachel-title {
-	padding: 2em 2em 0em 2em;
+.main-content {
+	margin-left: 16%;
+	background: rgb(255,255,255);
+	background: rgba(255,255,255, 0.5);
+	padding: 2em;
+	border-radius: 30px;
+}
+#logo {
 	text-align: center;
 }
-.rachel-title a {
-	font-size: 6em;
-	font-family:Edwardian Script ITC, script;
+#logo h1 a, #logo h2 a {
+	font-size: 4em;
+	font-family:Edwardian Script ITC, tahoma, serif;
 	text-decoration: none;
 	color: black;
 }
-#logo {
-	margin-bottom: 4%;
-}
-.resume-title {
-	font-size: 1.4em;
-}
-.resume {
-	width: 100%;
-	margin: 0em 0em 2em 2em;
-}
+#logo h2 a { font-size: 2em;}
+
 /*NAVIGATION*/
 nav {
 	float: left;
-	width: 20%;
-	max-width: 150px;
+	width: 15%;
+	max-width: 200px;
 	min-width: 130px;
 	background: rgb(255,255,255);
 	background: rgba(255,255,255, 0.5);
 	border-radius: 30px;
+	text-align: center;
 }
 nav a {
 	text-decoration: none;
@@ -58,18 +53,27 @@ nav a {
 	font-size: 1.1em;
 }
 nav li {
-	padding: 1em 1em 1em 2em;
+	padding: 1em 1em 1em 1em;
 	list-style: none;
-	font-family: serif;
+	font-family: ca, arial, sans-serif;;
 	font-size: 1.1em;
 }
+
+/*FOOTER*/
 footer {
 	clear:left;
-	margin: 2em 0em 0em 0em;
-	padding: 2em;
+	overflow: auto;
 	width: 100%;
 	bottom: 0;
+	margin-top: 1.5em;
 }
+.social-icon {
+	display: inline-block;
+	float:right;
+	margin-left: 1em;
+}
+
+
 .search-bar {
 	float: right;
 	margin: 1em;
@@ -114,24 +118,27 @@ iframe {
 	top: 0;
 }
 
+/*ABOUT PAGE STYLES*/
+#about-image {
+	float: left;
+	margin-right: 1em;
+	width: 40%;
+	max-width: 300px;
+	min-width: 200px;
+}
+
 /*HEADSHOT PAGE STYLES*/
 figure {
     width: 30%;
     display: inline-block;
 	 min-width: 150px;
+	 margin-bottom:
 }
 .headshot-gallery {
     width: 100%;
 }
-
-/*********************SPECIAL STYLES FOR HEADSHOT LIGHTBOX***********************/
+/**************SPECIAL STYLES FOR HEADSHOT LIGHTBOX****************/
 /*Eliminates padding, centers the thumbnail */
-body, html {
-/*padding: 0;*/
-/*margin: 0;
-text-align: center;*/
-}
-
 /* Styles the thumbnail */
 a.lightbox img {
 height: 100%;
@@ -139,7 +146,6 @@ border: 3px solid white;
 box-shadow: 0px 0px 8px rgba(0,0,0,.3);
 width: 97%;
 }
-
 /* Styles the lightbox, removes it from sight and adds the fade-in transition */
 .lightbox-target {
 position: absolute;
@@ -155,7 +161,6 @@ opacity: 0;
 transition: opacity .5s ease-in-out;
 overflow: hidden;
 }
-
 /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
 .lightbox-target img {
 margin: auto;
@@ -174,7 +179,6 @@ box-sizing: border-box;
 -o-transition: .5s ease-in-out;
 transition: .5s ease-in-out;
 }
-
 /* Styles the close link, adds the slide down transition */
 a.lightbox-close {
 display: block;
@@ -192,7 +196,6 @@ right: 0;
 -o-transition: .5s ease-in-out;
 transition: .5s ease-in-out;
 }
-
 /* Provides part of the "X" to eliminate an image from the close link */
 a.lightbox-close:before {
 content: "";
@@ -208,7 +211,6 @@ top:10px;
 -o-transform:rotate(45deg);
 transform:rotate(45deg);
 }
-
 /* Provides part of the "X" to eliminate an image from the close link */
 a.lightbox-close:after {
 content: "";
@@ -224,19 +226,52 @@ top:10px;
 -o-transform:rotate(-45deg);
 transform:rotate(-45deg);
 }
-
 /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
 .lightbox-target:target {
 opacity: 1;
 top: 0;
 bottom: 0;
 }
-
 .lightbox-target:target img {
 max-height: 100%;
 max-width: 100%;
 }
-
 .lightbox-target:target a.lightbox-close {
 top: 0px;
+}
+
+/*********RESUME TABLE STYLES*********/
+.resume-title {
+	font-size: 1.4em;
+	margin: 2em 0em .4em 0em;
+	text-align: center;
+	clear: right;
+}
+.resume {
+	width: 100%;
+	border-collapse: collapse;
+}
+tr {
+	border-top: 1px solid lightgray;
+}
+td {
+	padding: .3em;
+}
+th {
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+	text-align: left;
+}
+
+/*****************FORM STYLES************************/
+legend {
+	font-size: 1.6em;
+	font-family: sans-serif;
+}
+fieldset {
+	margin-bottom: 30px;
+}
+fieldset .button {
+	margin: .5em .5em .5em 0;
+	border: solid black 1px;
 }

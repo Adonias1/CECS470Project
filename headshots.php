@@ -8,12 +8,9 @@
 <body>
 	<?php include "includes/header.php"; ?>
 	<div class="main-content">
+		<h1>Rachel's Headshots</h1>
+		<p>Click on the images below to see the full headshot.</p><br>
 
-
-		<!-- <figure>
-			<img class="headshot-gallery" src="images/headshot2.jpg" alt="Rachel Lockhart Headshot 2" />
-			<figcaption></figcaption>
-		</figure> -->
 		<figure>
 			<a class="lightbox" href="#three">
 			   <img src="images/thumbnails/headshot3.jpg" alt="Rachel Lockhart Headshot Thumbnail"/>

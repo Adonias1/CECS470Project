@@ -71,24 +71,24 @@ INSERT INTO cecs470g6.skills (skill_type, skill) VALUES
     ("Stage Combat", "Hand to Hand"), ("Stage Combat", "Broad Sword"), 
     ("Dance", "Jazz"), ("Dance", "Ballet"), ("Dance", "Modern");
 
--- CREATE TABLE cecs470g6.dialects (
---     dialect VARCHAR(20),
---     PRIMARY KEY(dialect));
--- INSERT INTO cecs470g6.dialects (dialect) VALUES
---     ("Standard British"), ("Cockney"), ("American Southern"), 
---     ("Irish"), ("French"), ("German"), ("Brooklyn");
--- 
--- CREATE TABLE cecs470g6.stage_combat (
---     ctype VARCHAR(20),
---     PRIMARY KEY(ctype));
--- INSERT INTO cecs470g6.stage_combat (ctype) VALUES
---     ("Hand to Hand"), ("Broad Sword");
--- 
--- CREATE TABLE cecs470g6.dance (
---     dtype VARCHAR(20),
---     PRIMARY KEY(dtype));
--- INSERT INTO cecs470g6.dance (dtype) VALUES
---     ("Jazz"), ("Ballet"), ("Modern");
+CREATE TABLE cecs470g6.dialects (
+    dialect VARCHAR(20),
+    PRIMARY KEY(dialect));
+INSERT INTO cecs470g6.dialects (dialect) VALUES
+    ("Standard British"), ("Cockney"), ("American Southern"), 
+    ("Irish"), ("French"), ("German"), ("Brooklyn");
+
+CREATE TABLE cecs470g6.stage_combat (
+    ctype VARCHAR(20),
+    PRIMARY KEY(ctype));
+INSERT INTO cecs470g6.stage_combat (ctype) VALUES
+    ("Hand to Hand"), ("Broad Sword");
+
+CREATE TABLE cecs470g6.dance (
+    dtype VARCHAR(20),
+    PRIMARY KEY(dtype));
+INSERT INTO cecs470g6.dance (dtype) VALUES
+    ("Jazz"), ("Ballet"), ("Modern");
 
 
 -- DROP TABLE cecs470g6.tv_roles;
