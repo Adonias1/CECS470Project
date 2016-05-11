@@ -31,6 +31,7 @@
 
 		<form id = "mainForm" action = "contact.php" method = "POST">
 		<?php
+<<<<<<< HEAD
 		if($_SERVER["REQUEST_METHOD"]=="POST"){
 			if(!empty($_POST["firstname"])){
 				echo "<fieldset><legend>Message Confirmation</legend>";
@@ -41,6 +42,8 @@
 		}
 		?>
 		<?php
+=======
+>>>>>>> refs/remotes/origin/master
 			// define variables and set to empty values
 			$fNameErr = $lNameErr = $emailErr = $requiredFields = "";
 			$reqBool = true;
@@ -66,6 +69,10 @@
      				$emailErr = "* Email is required";
      				$reqBool = false;
    				}
+				else if(!(preg_match('/^(.+)@([^\.].*)\.([a-z]{2,})$/',$_POST["email"]))){
+					$emailErr = "* Invalid Email Format";
+					$reqBool = false;
+				}
    				else{
      				$contactString .= "Email: ".$_POST["email"]."\n";
    				}
@@ -74,6 +81,7 @@
    				}
 				if (!empty($_POST['message'])) {
 					$contactString .= "Message: ". $_POST['message']."\n";
+<<<<<<< HEAD
 				}
 				if ($reqBool != true){
    					$requiredFields = "* Required Fields";
@@ -100,6 +108,32 @@
    			}
 			mysqli_close($connection);
    		?>	
+=======
+				}
+				if($reqBool == true){
+
+					$sql = "INSERT INTO Prospects(FirstName, LastName, Email, Message) VALUES('".$_POST["firstname"]."',
+						'".$_POST["lastname"]."', '".$_POST["email"]."', '".$_POST["message"]."')";
+					//echo "before query<br>";
+					//exectue the query
+					//echo "after query<br>";
+					//find out how many rows are in the result set
+					$numrows=mysqli_num_rows($result);
+					//echo "The number of rows is: ".$numrows."<br>";
+					//loop through the result set
+					if (mysqli_query($connection, $sql)){
+						echo "<fieldset><legend>Message Confirmation</legend>";
+						echo "<h1>Thank you! Your message has been submitted successfully.</h1>";
+						echo "<p>Rachel will respond to your inquiry as soon as possible.</p>";
+						echo "<p><a href = 'contact.txt'>Info Review</a></p></fieldset>";
+						echo "Data was successfully set <br>";
+					}
+					else { echo "Email already exists in our records<br>";}
+				}
+   			}
+
+   		?>
+>>>>>>> refs/remotes/origin/master
 			<section>
 				<fieldset>
 					<!-- <h3>Enter Personal Info: </h3> -->
@@ -130,5 +164,6 @@
 </body>
 	<?php
 		fclose($ofile);
+		mysqli_close($connection);
 	?>
 </html>
