@@ -19,13 +19,15 @@ if ($error != null) {
 <body>
 	<?php include "includes/header.php"; ?>
 	<div class="main-content">
+
+		<form class="search-bar" action="resume.php" method="post">
+			<input type="submit" name="submit" value="Search Project">
+			<input type="search" name="search" value="">
+		</form>
+		
 		<h1>Rachel Lockhart Resume</h1>
 
 		<h1 class="resume-title" align="center"><a href="resume.pdf" target="_blank">Download PDF Resume</a></h1>
-		<form class="search-bar" action="#" method="post">
-			<input type="button" name="submit" value="Search Projects">
-			<input type="search" name="search" value="">
-		</form>
 
 		<!-- GENERATE TV EXPREIENCE FROM DATABASE -->
 		<h1 class="resume-title">Television Roles</h1>
@@ -75,28 +77,21 @@ if ($error != null) {
 			}
 			//exectue the query
 			$result = mysqli_query($connection, $sql);
-		//create the sql statement
-		$sql = "SELECT * FROM cecs323o31.film_roles";
-
-		//exectue the query
-		$result = mysqli_query($connection, $sql);
-
-		//loop through the result set
-		if ($result = mysqli_query($connection, $sql)) {
-	  // Fetch one and one row
-	  while ($row = mysqli_fetch_assoc($result)) {
-			echo "<tr>";
-			echo "<td>" . $row["project"] . "</td>";
-			echo "<td>" . $row["roles"] . "</td>";
-			echo "<td>" . $row["prod_dir"] . "</td>";
-			echo"</tr>";
-	  }
-
-	  // Free result set
-	  mysqli_free_result($result);
-		} else {
-	  echo "no result<br>";
-		}
+			//loop through the result set
+			if ($result = mysqli_query($connection, $sql)) {
+		  // Fetch one and one row
+		  while ($row = mysqli_fetch_assoc($result)) {
+				echo "<tr>";
+				echo "<td>" . $row["project"] . "</td>";
+				echo "<td>" . $row["roles"] . "</td>";
+				echo "<td>" . $row["prod_dir"] . "</td>";
+				echo"</tr>";
+		  }
+		  // Free result set
+		  mysqli_free_result($result);
+			} else {
+		  echo "no result<br>";
+			}
 		?>
 		</table>
 
@@ -256,9 +251,6 @@ if ($error != null) {
 					?>
 				</tr>
 			</table>
-		</table>
-
-		<!--TODO FILL IN BODY -->
 
 		<?php include "includes/footer.php"; ?>
 	</div>

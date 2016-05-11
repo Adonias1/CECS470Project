@@ -6,7 +6,7 @@
  ?>
 <head>
  <?php include "includes/head.php" ?>
- <script src="contact.js"></script>
+ <script src="js/contact.js"></script>
 </head>
 <?php
  $connection = mysqli_connect("cecs-db01.coe.csulb.edu","cecs323o32","iehohx","cecs470g6");
