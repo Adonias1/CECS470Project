@@ -9,7 +9,7 @@
 </head>
 <?php
 //echo "before connect<br>";
-$connection = mysqli_connect("cecs-db01.coe.csulb.edu","cecs323o32","iehohx","cecs470g6");
+	$connection = mysqli_connect("cecs-db01.coe.csulb.edu","cecs323o32","iehohx","cecs470g6");
 // mysqli_connect_error returns string description of the last
 // connect error
 //echo "after connect<br>";
@@ -21,32 +21,8 @@ if ($error != null) {
   // Outputs a message and terminates the current script
   exit($output);
   }
-  //echo "connected<br>";
-  //create the sql statement
-  $sql = "INSERT INTO Prospects";
-  //echo "before query<br>";
-  //exectue the query
-  $result = mysqli_query($connection, $sql);
-  //echo "after query<br>";
-  //find out how many rows are in the result set
-  $numrows=mysqli_num_rows($result);
-  //echo "The number of rows is: ".$numrows."<br>";
-  //loop through the result set
-  if ($result=mysqli_query($connection,$sql))
-    {
-    // Fetch one and one row
-    while ($row=mysqli_fetch_assoc($result))
-	{
-                echo $row["FirstName"]." ".$row["LastName"];
-				echo $row["Email"];
-				echo $row["Message"];
-      }
-
-    // Free result set
-    mysqli_free_result($result);
-
-  }
-  else { echo "no result<br>";}
+  else{ $output = "<p>Connected to Database</p>";}
+  echo $output;
 ?>
 
 <body>
@@ -108,31 +84,21 @@ if ($error != null) {
    			}
 			
 			if($reqBool == true){
-				$sql = "INSERT INTO Prospects(FirstName, LastName, Email, Message) VALUES('".$firstname."', 
-				'".$lastname."', '".$email."', '".$message."')";
+				$sql = "INSERT INTO Prospects(FirstName, LastName, Email, Message) VALUES('".$_POST["firstname"]."', 
+				'".$_POST["lastname"]."', '".$_POST["email"]."', '".$_POST["message"]."')";
 				//echo "before query<br>";
-			//exectue the query
-			$result = mysqli_query($connection, $sql);
-			//echo "after query<br>";
-			//find out how many rows are in the result set
-			$numrows=mysqli_num_rows($result);
-			//echo "The number of rows is: ".$numrows."<br>";
-			//loop through the result set
-			if ($result=mysqli_query($connection,$sql))
-				{
-			// Fetch one and one row
-				while ($row=mysqli_fetch_assoc($result))
-				{
-					echo $row["FirstName"]." ".$row["LastName"];
-					echo $row["Email"];
-					echo $row["Message"];
+				//exectue the query
+				$result = mysqli_query($connection, $sql);
+				//echo "after query<br>";
+				//find out how many rows are in the result set
+				$numrows=mysqli_num_rows($result);
+				//echo "The number of rows is: ".$numrows."<br>";
+				//loop through the result set
+				if (mysqli_query($connection, $sql)){
+					echo "Data was successfully set <br>";
 				}
-
-    // Free result set
-			mysqli_free_result($result);
-
+				else { echo "Data was not set<br>";}
 			}
-			else { echo "no result<br>";}
    		?>
 			<section>
 				<fieldset>
