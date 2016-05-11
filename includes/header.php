@@ -5,7 +5,7 @@
 	</div>
 	<nav>
 		<li><a href="index.php">Home</a></li>
-		<li><a href="projects.php">Projects</a></li>
+		<li><a href="projects.php">News/Projects</a></li>
 		<li><a href="headshots.php">Headshots</a></li>
 		<li><a href="reel.php">Reel</a></li>
 		<li><a href="resume.php">Resume</a></li>
