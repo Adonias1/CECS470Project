@@ -22,6 +22,7 @@ window.onload=function() {
 		bool=false;
 		
 	}
+	
 	var field = document.getElementById("mainForm");
 	if(bool==false) {
 		event.preventDefault();
