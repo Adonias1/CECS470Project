@@ -70,8 +70,8 @@
 					$contactString .= "Message: ". $_POST['message']."\n";
 				}
 				if($reqBool == true){
-					
-					$sql = "INSERT INTO Prospects(FirstName, LastName, Email, Message) VALUES('".$_POST["firstname"]."', 
+
+					$sql = "INSERT INTO Prospects(FirstName, LastName, Email, Message) VALUES('".$_POST["firstname"]."',
 						'".$_POST["lastname"]."', '".$_POST["email"]."', '".$_POST["message"]."')";
 					//echo "before query<br>";
 					//exectue the query
@@ -90,7 +90,7 @@
 					else { echo "Email already exists in our records<br>";}
 				}
    			}
-			
+
    		?>
 			<section>
 				<fieldset>
@@ -108,7 +108,7 @@
 					<input id = email type="email" name="email" size="30">
 					<span class = "error"><?php echo $emailErr;?></span><br>
 					<br>
-					<label><p>Message:</p></label>
+					<label>Message:</label><br>
 					<textarea name="message" form='mainForm' rows="6" cols="50"></textarea>
 					<br>
 					<input id="contact" class="button" type="submit" value="Send">
