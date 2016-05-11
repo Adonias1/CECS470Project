@@ -31,6 +31,16 @@
 
 		<form id = "mainForm" action = "contact.php" method = "POST">
 		<?php
+		if($_SERVER["REQUEST_METHOD"]=="POST"){
+			if(!empty($_POST["firstname"])){
+				echo "<fieldset><legend>Message Confirmation</legend>";
+				echo "<h1>Thank you! Your message has been submitted successfully.</h1>";
+				echo "<p>Rachel will respond to your inquiry as soon as possible.</p>";
+				echo "<p><a href = 'contact.txt'>Info Review</a></p></fieldset>";
+			}
+		}
+		?>
+		<?php
 			// define variables and set to empty values
 			$fNameErr = $lNameErr = $emailErr = $requiredFields = "";
 			$reqBool = true;
@@ -68,6 +78,31 @@
    				}
 				if (!empty($_POST['message'])) {
 					$contactString .= "Message: ". $_POST['message']."\n";
+				}
+				if ($reqBool != true){
+   					$requiredFields = "* Required Fields";
+   				}
+				if (!empty($_POST['message'])) {
+						$contactString .= "Message: ". $_POST['message']."\n";
+					}
+				if($reqBool == true){
+					$connection = mysqli_connect("cecs-db01.coe.csulb.edu","cecs323o32","iehohx","cecs470g6");
+					$error = mysqli_connect_error();
+					//if there is a connection error...
+					if ($error != null) {
+					$output = "<p>Unable to connect to database<p>" . $error;
+					// Outputs a message and terminates the current script
+					exit($output);
+					}
+					$sql = "INSERT INTO Prospects(FirstName, LastName, Email, Message) VALUES('".$_POST["firstname"]."', 
+						'".$_POST["lastname"]."', '".$_POST["email"]."', '".$_POST["message"]."')";
+					if (mysqli_query($connection, $sql)){
+						echo "Data was successfully set <br>";
+					}
+					else { echo "Email already exists in our records. Please wait for a response<br>";}
+				}
+   			}
+			mysqli_close($connection);
 				}
 				if($reqBool == true){
 
