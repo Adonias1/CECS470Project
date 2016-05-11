@@ -22,7 +22,7 @@
 		<?php
 		if($_SERVER["REQUEST_METHOD"]=="POST"){
 			if(!empty($_POST["firstname"])){
-				echo "<fieldset><legend>Order Confirmation</legend>";
+				echo "<fieldset><legend>Message Confirmation</legend>";
 				echo "<h1>Thank you! Your message has been submitted successfully.</h1>";
 				echo "<p>Rachel will respond to your inquiry as soon as possible.</p>";
 				echo "<p><a href = 'contact.txt'>Info Review</a></p></fieldset>";
@@ -61,9 +61,9 @@
    				if ($reqBool != true){
    					$requiredFields = "* Required Fields";
    				}
-					if (!empty($_POST['message'])) {
-						$contactString .= "Message: ". $_POST['message']."\n";
-					}
+				if (!empty($_POST['message'])) {
+					$contactString .= "Message: ". $_POST['message']."\n";
+				}
    			}
 
    			?>
