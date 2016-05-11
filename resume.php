@@ -19,8 +19,6 @@ if ($error != null) {
 <body>
 	<?php include "includes/header.php"; ?>
 	<div class="main-content">
-
-<<<<<<< HEAD
 		<h1>Rachel Lockhart Resume</h1>
 
 		<form class="search-bar" action="resume.php" method="post">
@@ -29,14 +27,11 @@ if ($error != null) {
 		</form>
 
 		<h1 class="resume-title" align="center"><a href="resume.pdf" target="_blank">Download PDF Resume</a></h1>
-
-=======
 		<form class="search-bar" action="#" method="post">
 			<input type="button" name="submit" value="Search Projects">
 			<input type="search" name="search" value="">
 		</form>
 
->>>>>>> refs/remotes/origin/Brick
 		<!-- GENERATE TV EXPREIENCE FROM DATABASE -->
 		<h1 class="resume-title">Television Roles</h1>
 		<table class="resume">
@@ -44,7 +39,6 @@ if ($error != null) {
 				<th>Project</th><th>Role</th><th>Producer/Director</th>
 			</tr>
 		<?php
-<<<<<<< HEAD
 			//create the sql statement
 			if (isset($_REQUEST['search'])) {
 				$sql = "SELECT * FROM cecs470g6.tv_roles WHERE project LIKE '" . $_REQUEST['search'] . "%'";
@@ -71,7 +65,6 @@ if ($error != null) {
 		?>
 	</table>
 
-=======
 		//create the sql statement
 		$sql = "SELECT * FROM cecs323o31.tv_roles";
 
@@ -96,7 +89,6 @@ if ($error != null) {
 		}
 		?>
 	</table>
->>>>>>> refs/remotes/origin/Brick
 		<!-- GENERATE FILM EXPERIENCE FROM DATABASE -->
 		<h1 class="resume-title">Films</h1>
 		<table class="resume">
@@ -104,7 +96,6 @@ if ($error != null) {
 				<th>Project</th><th>Role</th><th>Producer/Director</th>
 			</tr>
 		<?php
-<<<<<<< HEAD
 			//create the sql statement
 			if (!empty($_REQUEST['search'])) {
 				$sql = "SELECT * FROM cecs470g6.film_roles WHERE project LIKE '" . $_REQUEST['search'] . "%'";
@@ -113,7 +104,6 @@ if ($error != null) {
 			}
 			//exectue the query
 			$result = mysqli_query($connection, $sql);
-=======
 		//create the sql statement
 		$sql = "SELECT * FROM cecs323o31.film_roles";
 
@@ -152,7 +142,6 @@ if ($error != null) {
 			//exectue the query
 			$result = mysqli_query($connection, $sql);
 
->>>>>>> refs/remotes/origin/Brick
 			//loop through the result set
 			if ($result = mysqli_query($connection, $sql)) {
 		  // Fetch one and one row
@@ -160,11 +149,8 @@ if ($error != null) {
 				echo "<tr>";
 				echo "<td>" . $row["project"] . "</td>";
 				echo "<td>" . $row["roles"] . "</td>";
-<<<<<<< HEAD
 				echo "<td>" . $row["prod_dir"] . "</td>";
-=======
 				echo "<td>" . $row["theater"] . "</td>";
->>>>>>> refs/remotes/origin/Brick
 				echo"</tr>";
 		  }
 		  // Free result set
@@ -172,7 +158,6 @@ if ($error != null) {
 			} else {
 		  echo "no result<br>";
 			}
-<<<<<<< HEAD
 		?>
 		</table>
 
@@ -332,12 +317,10 @@ if ($error != null) {
 					?>
 				</tr>
 			</table>
-=======
 			?>
 		</table>
 
 		<!--TODO FILL IN BODY -->
->>>>>>> refs/remotes/origin/Brick
 
 		<?php include "includes/footer.php"; ?>
 	</div>
