@@ -12,16 +12,6 @@
 		<p>Click on the images below to see the full headshot.</p><br>
 
 		<figure>
-			<a class="lightbox" href="#three">
-			   <img src="images/thumbnails/headshot3.jpg" alt="Rachel Lockhart Headshot Thumbnail"/>
-			</a>
-			<div class="lightbox-target" id="three">
-			   <img src="images/headshot3.jpg" alt="Rachel Lockhart Headshot image" />
-			   <a class="lightbox-close" href="#"></a>
-			</div>
-		</figure>
-
-		<figure>
 			<a class="lightbox" href="#four">
 				<img src="images/thumbnails/headshot4.jpg" alt="Rachel Lockhart Headshot Thumbnail"/>
 			</a>
@@ -77,6 +67,16 @@
 			</a>
 			<div class="lightbox-target" id="nine">
 				<img src="images/headshot9.jpg" alt="Rachel Lockhart Headshot image"/>
+				<a class="lightbox-close" href="#"></a>
+			</div>
+		</figure>
+
+		<figure>
+			<a class="lightbox" href="#three">
+				<img src="images/thumbnails/headshot3.jpg" alt="Rachel Lockhart Headshot Thumbnail"/>
+			</a>
+			<div class="lightbox-target" id="three">
+				<img src="images/headshot3.jpg" alt="Rachel Lockhart Headshot image" />
 				<a class="lightbox-close" href="#"></a>
 			</div>
 		</figure>
