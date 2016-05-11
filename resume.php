@@ -21,11 +21,6 @@ if ($error != null) {
 	<div class="main-content">
 		<h1>Rachel Lockhart Resume</h1>
 
-		<form class="search-bar" action="resume.php" method="post">
-			<input type="submit" name="submit" value="Search Project">
-			<input type="search" name="search" value="">
-		</form>
-
 		<h1 class="resume-title" align="center"><a href="resume.pdf" target="_blank">Download PDF Resume</a></h1>
 		<form class="search-bar" action="#" method="post">
 			<input type="button" name="submit" value="Search Projects">
@@ -64,31 +59,7 @@ if ($error != null) {
 			}
 		?>
 	</table>
-		<?php
-		//create the sql statement
-		$sql = "SELECT * FROM cecs323o31.tv_roles";
 
-		//exectue the query
-		$result = mysqli_query($connection, $sql);
-
-		//loop through the result set
-		if ($result = mysqli_query($connection, $sql)) {
-	  // Fetch one and one row
-	  while ($row = mysqli_fetch_assoc($result)) {
-			echo "<tr>";
-			echo "<td>" . $row["project"] . "</td>";
-			echo "<td>" . $row["roles"] . "</td>";
-			echo "<td>" . $row["prod_dir"] . "</td>";
-			echo"</tr>";
-	  }
-
-	  // Free result set
-	  mysqli_free_result($result);
-		} else {
-	  echo "no result<br>";
-		}
-		?>
-	</table>
 		<!-- GENERATE FILM EXPERIENCE FROM DATABASE -->
 		<h1 class="resume-title">Films</h1>
 		<table class="resume">
@@ -126,38 +97,6 @@ if ($error != null) {
 		} else {
 	  echo "no result<br>";
 		}
-		?>
-		</table>
-
-		<!-- GENERATE THEATER EXPERIENCE FROM DATABASE -->
-		<h1 class="resume-title">Theater</h1>
-		<table class="resume">
-			<tr>
-				<th>Project</th><th>Role</th><th>Theater</th>
-			</tr>
-			<?php
-			//create the sql statement
-			$sql = "SELECT * FROM cecs323o31.theater_roles";
-
-			//exectue the query
-			$result = mysqli_query($connection, $sql);
-
-			//loop through the result set
-			if ($result = mysqli_query($connection, $sql)) {
-		  // Fetch one and one row
-		  while ($row = mysqli_fetch_assoc($result)) {
-				echo "<tr>";
-				echo "<td>" . $row["project"] . "</td>";
-				echo "<td>" . $row["roles"] . "</td>";
-				echo "<td>" . $row["prod_dir"] . "</td>";
-				echo "<td>" . $row["theater"] . "</td>";
-				echo"</tr>";
-		  }
-		  // Free result set
-		  mysqli_free_result($result);
-			} else {
-		  echo "no result<br>";
-			}
 		?>
 		</table>
 
@@ -317,7 +256,6 @@ if ($error != null) {
 					?>
 				</tr>
 			</table>
-			?>
 		</table>
 
 		<!--TODO FILL IN BODY -->

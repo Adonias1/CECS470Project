@@ -327,16 +327,11 @@ fieldset .button {
     border-radius: 5px;
 }
 #mainForm {
-<<<<<<< HEAD
     position: relative;
-	 text-align: center;
-=======
-	position: relative;	
-	text-align: center;
+	 text-align: left;
 }
 
 .button{
-	background-color: black;
+	background-color: #333;
 	color: white;
->>>>>>> refs/remotes/origin/AdoniasLopez
 }
