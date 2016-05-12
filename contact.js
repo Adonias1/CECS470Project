@@ -5,28 +5,29 @@ window.onload=function() {
 	var fNameField=document.getElementById("mainForm").fname;
 	if(fNameField.value == "")
 	{
-		 
+
 		fNameField.style.backgroundColor = "red";
-		bool=false;	
+		bool=false;
 	}
 	var lNameField=document.getElementById("mainForm").lname;
 	if(lNameField.value == ""){
-		 
+
 		lNameField.style.backgroundColor = "red";
-		bool=false;	
+		bool=false;
 	}
 	var emailField=document.getElementById("mainForm").email;
 	if(emailField.value == ""){
-		
+
 		emailField.style.backgroundColor = "red";
 		bool=false;
-		
+
 	}
+
 	var field = document.getElementById("mainForm");
 	if(bool==false) {
 		event.preventDefault();
 		alert("Please fill out the highlighted fields");
-	} 
+	}
 	return bool;
 	}
 	var fnf=document.getElementById("fname");
@@ -34,7 +35,7 @@ window.onload=function() {
 	 if(fnf.style.backgroundColor=="red"){
 		fnf.style.backgroundColor="white";
 		}
-	}	
+	}
 	var lnf=document.getElementById("lname");
 	lnf.onkeypress = function() {
 		if(lnf.value && lnf.style.backgroundColor=="red"){
@@ -48,6 +49,3 @@ window.onload=function() {
 		}
 	}
 }
-
-
-
