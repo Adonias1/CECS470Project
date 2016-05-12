@@ -1,4 +1,6 @@
 <footer>
+	<?php echo "Last Modified: ".date("F d Y H:i:s.", getlastmod()); ?>
+
 	<a href="https://www.facebook.com/rachelsuzannelockhart" target="_blank">
 		<img class="social-icon" src="images/social/Facebook.png" alt="Facebook social icon"/>
 	</a>
