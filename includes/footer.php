@@ -1,6 +1,4 @@
 <footer>
-	<?php echo "Last Modified: ".date("F d Y H:i:s.", getlastmod()); ?>
-
 	<a href="https://www.facebook.com/rachelsuzannelockhart" target="_blank">
 		<img class="social-icon" src="images/social/Facebook.png" alt="Facebook social icon"/>
 	</a>
@@ -20,4 +18,8 @@
 	<a href="http://www.imdb.com/name/nm4092562/?ref_=fn_al_nm_1" target="_blank">
 		<img class="social-icon" src="images/social/imdb.png" alt="IMDB social icon"/>
 	</a>
+
+
+	<?php echo "Last Modified: ".date("F d Y H:i:s.", getlastmod()); ?>
+
 </footer>

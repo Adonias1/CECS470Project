@@ -20,12 +20,12 @@ if ($error != null) {
 	<?php include "includes/header.php"; ?>
 	<div class="main-content">
 
-		<h1>Rachel Lockhart Resume</h1>
-
 		<form class="search-bar" action="resume.php" method="post">
 			<input type="submit" name="submit" value="Search Project">
 			<input type="search" name="search" value="">
 		</form>
+		
+		<h1>Rachel Lockhart Resume</h1>
 
 		<h1 class="resume-title" align="center"><a href="resume.pdf" target="_blank">Download PDF Resume</a></h1>
 

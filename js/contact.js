@@ -5,7 +5,6 @@ window.onload=function() {
 	var fNameField=document.getElementById("mainForm").fname;
 	if(fNameField.value == "")
 	{
-
 		fNameField.style.backgroundColor = "red";
 		bool=false;
 	}
@@ -20,7 +19,6 @@ window.onload=function() {
 
 		emailField.style.backgroundColor = "red";
 		bool=false;
-
 	}
 
 	var field = document.getElementById("mainForm");
@@ -36,6 +34,7 @@ window.onload=function() {
 		fnf.style.backgroundColor="white";
 		}
 	}
+
 	var lnf=document.getElementById("lname");
 	lnf.onkeypress = function() {
 		if(lnf.value && lnf.style.backgroundColor=="red"){

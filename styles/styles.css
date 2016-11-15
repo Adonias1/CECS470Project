@@ -328,5 +328,10 @@ fieldset .button {
 }
 #mainForm {
     position: relative;
-	 text-align: center;
+	 text-align: left;
+}
+
+.button{
+	background-color: #333;
+	color: white;
 }
